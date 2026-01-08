@@ -240,13 +240,13 @@ function initSkillsCarousel() {
     nextBtn.addEventListener('click', () => {
         clearInterval(autoSlideInterval);
         nextSlide();
-        setTimeout(startAutoSlide, 4000); // Restart after 5 seconds
+        setTimeout(startAutoSlide, 5000); // Restart after 5 seconds
     });
     
     prevBtn.addEventListener('click', () => {
         clearInterval(autoSlideInterval);
         prevSlide();
-        setTimeout(startAutoSlide, 4000); // Restart after 5 seconds
+        setTimeout(startAutoSlide, 5000); // Restart after 5 seconds
     });
     
     // Touch/swipe support for mobile
