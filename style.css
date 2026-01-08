@@ -1,4 +1,4 @@
-/* style.css */
+
 /* ----- CSS Reset & Base Styles ----- */
 * {
     margin: 0;
@@ -7,7 +7,7 @@
 }
 
 :root {
-    /* Color Palette - Similar to reference site */
+    /* Color Palette */
     --color-bg: #0a0a0a;
     --color-surface: #111111;
     --color-primary: #ffffff;
@@ -390,5 +390,197 @@ a:hover {
 
     section {
         padding: var(--space-lg) 0;
+    }
+}
+
+/* ----- Skills Carousel Section ----- */
+.skills-carousel {
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 40px 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-secondary);
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* Container */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    margin: 0 auto;
+    max-width: 500px; 
+    width: 90%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    gap: 12px;
+    padding: 0 10px;
+}
+
+.skill-item {
+    flex: 0 0 auto;
+    width: 130px;
+    height: 130px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: all 0.25s ease;
+    user-select: none;
+}
+
+.skill-item:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 108, 255, 0.1);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: var(--color-accent);
+}
+
+.skill-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.skill-level {
+    font-size: 0.75rem;
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding: 0 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.carousel-btn {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-size: 1rem;
+}
+
+.carousel-btn:hover:not(:disabled) {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-border);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.carousel-dot.active {
+    background-color: var(--color-accent);
+    transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes subtle-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.auto-rotating {
+    animation: subtle-pulse 2.5s infinite;
+}
+
+/* Change size on tablet*/          
+@media (max-width: 768px) {
+    .skills-carousel {
+        padding: 30px 0;
+    }
+    
+    .carousel-container {
+        max-width: 500px;
+        width: 95%;
+    }
+    
+    .carousel-controls {
+        max-width: 500px; 
+        width: 95%;
+    }
+    
+    .skill-item {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* Change size on mobile */
+@media (max-width: 480px) {
+    .carousel-container {
+        max-width: 350px;
+        width: 95%;
+        padding: 10px 0;
+    }
+    
+    .carousel-controls {
+        max-width: 350px;
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    .skill-item {
+        width: 100px; 
+        height: 100px;
+        padding: 10px;
+    }
+    
+    .skill-icon {
+        font-size: 1.7rem;
+    }
+    
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
     }
 }
