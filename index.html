@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaiah Hinson Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation & Hero Section -->
+    <header class="hero">
+        <nav class="nav container">
+            <a href="#" class="logo">Logo placeholder</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div class="hero-content container">
+            <h3 class="hero-greeting">Hello, I'm</h3>
+            <h1 class="hero-title">Isaiah Hinson</h1>
+            <p class="hero-subtitle">Computer Science Student</p>
+            <p class="hero-desc">Passionate about solving complex problems with straightforward code. Currently  studying cybersecurity at Goldsmiths University.mental</p>
+            <a href="#projects" class="btn btn-primary">View my work</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- About & Skills Section -->
+        <section class="section about" id="about">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="about-content">
+                    <p class="about-text">
+                        Fully committed to the philosophy of life-long learning, I’m a computer science student with a deep passion for Python, JavaScript, and all things web development. The unique combination of creativity, logic, and technology drives my excitement for building digital solutions. When I’m not at my computer I like to spend my time reading, hiking, and playing chess.
+                    </p>
+                    <div class="skills-grid">
+                        <span class="skill-tag">PYTHON</span>
+                        <span class="skill-tag">JAVASCRIPT</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">NODE.JS</span>
+                        <span class="skill-tag">JAVA</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-info">
+                            <h3 class="project-title">StudyFlow</h3>
+                            <p class="project-subtitle">Productivity App</p>
+                            <p class="project-desc">
+                                A full-stack application for students to organize coursework, built with React, Node.js, and PostgreSQL.
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i> Live app</a>
+                                <a href="#" class="link-icon"><i class="fab fa-github"></i> Learn more</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-info">
+                            <h3 class="project-title">ML-Image Lab</h3>
+                            <p class="project-subtitle">Machine Learning Tool</p>
+                            <p class="project-desc">
+                                An interactive web tool to visualize simple machine learning models, built with Python (Flask) and D3.js.
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i> Live app</a>
+                                <a href="#" class="link-icon"><i class="fab fa-github"></i> Learn more</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-info">
+                            <h3 class="project-title">Campus Marketplace</h3>
+                            <p class="project-subtitle">E-Commerce Platform</p>
+                            <p class="project-desc">
+                                A peer-to-peer marketplace for university students, built with Next.js, Firebase, and Tailwind CSS.
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i> Live app</a>
+                                <a href="#" class="link-icon"><i class="fab fa-github"></i> Learn more</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project 4 -->
+                    <article class="project-card">
+                        <div class="project-info">
+                            <h3 class="project-title">Algorithm Visualizer</h3>
+                            <p class="project-subtitle">Educational Tool</p>
+                            <p class="project-desc">
+                                A tool that visualizes pathfinding and sorting algorithms, built with vanilla JavaScript and HTML5 Canvas.
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i> Live app</a>
+                                <a href="#" class="link-icon"><i class="fab fa-github"></i> Learn more</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-content">
+                    <p class="contact-text">
+                        Have a question about a project or want to work together? Leave your details and I'll get back to you as soon as possible.
+                    </p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Please enter your name." required>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Please enter a valid email." required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder="Please enter a message." required></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <p id="formStatus" class="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear">2026</span> Isaiah Hinson. Built with HTML, CSS & JavaScript.</p>
+            <div class="footer-links">
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:hello@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
